@@ -11,7 +11,7 @@ import apiRoutes from "./routes/apiRoutes.js";
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 8008;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

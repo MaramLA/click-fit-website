@@ -1,4 +1,5 @@
 $(document).ready(() => {
+  const baseUrl = "http://localhost:8008";
   const elements = {
     aboutText: $("#about-text"),
     dataDiv: $("#dataDiv"),
@@ -31,7 +32,7 @@ $(document).ready(() => {
       menu.append(`<li><a class="nav-link" href="#signUp">Sign Up</a></li>`);
     }
 
-    menu.toggleClass("show-menu"); 
+    menu.toggleClass("show-menu");
   });
 
   // Use event delegation to handle clicks on all <li>, including dynamically added ones
@@ -71,7 +72,7 @@ $(document).ready(() => {
   //  Fetch uploaded files
   $.ajax({
     type: "GET",
-    url: "http://localhost:8008/files",
+    url: `${baseUrl}/files`,
     success: (data) => {
       elements.gallery.append(
         data.files
@@ -97,14 +98,14 @@ $(document).ready(() => {
     formData.append("file", file);
 
     return $.ajax({
-      url: "http://localhost:8008/upload",
+      url: `${baseUrl}/upload`,
       method: "POST",
       data: formData,
       contentType: false,
       processData: false,
       success: function (data) {
         const $img = $("<img>")
-          .attr("src", `http://localhost:8008/uploads/${data.filename}`)
+          .attr("src", `${baseUrl}/uploads/${data.filename}`)
           .addClass("img-thumbnail");
         elements.gallery.append($img);
       },
@@ -125,7 +126,7 @@ $(document).ready(() => {
 
     $.ajax({
       type: "POST",
-      url: "http://localhost:8008/api/users",
+      url: `${baseUrl}/api/users`,
       contentType: "application/json",
       data: JSON.stringify(userData),
       success: () => alert("New user was created successfully"),

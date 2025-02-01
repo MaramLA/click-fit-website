@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+    <title>Click Fit</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left-section">
+          <div class="logo">
+            <p class="logo-content">Click Fit</p>
+          </div>
+          <div>
+            <ul class="links-list">
+              <li><a class="nav-link" href="#home">Home</a></li>
+              <li><a class="nav-link" href="#service">Share</a></li>
+              <li><a class="nav-link" href="#about">About Us</a></li>
+              <li><a class="nav-link" href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="right-section">
+          <div class="buttons">
+            <button class="menu-toggle">☰</button>
+            <button type="button" class="btnB" id="signUpBtn">
+              <a href="#signUp">Sign Up</a>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="left-section">
+          <h2 class="heading">Get Inspiered with Us</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores,
+            nulla velit dolore mollitia deserunt ea saepe. Cum deleniti veniam
+            amet animi atque, sapiente neque laudantium consequuntur, est
+            architecto eum ratione.
+          </p>
+          <button class="btnB"><a href="#service">Let's Go</a></button>
+        </div>
+        <div class="right-section">
+          <div class="img-container">
+            <img src="./assets/hero.jpg" alt="hero" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="service" id="service">
+      <h2 class="heading">Share Your Workout</h2>
+      <div class="container">
+        <div id="uploadedImage"></div>
+        <form
+          id="uploadForm"
+          action="http://localhost:8008/upload"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <div id="drop_zone">
+            <p>Drag and drop files here</p>
+          </div>
+          <div class="file-upload">
+            <input type="file" id="fileInput" name="file" multiple />
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2 class="heading">About Us</h2>
+      <p class="about-text" id="about-text"></p>
+      <div class="container">
+        <div class="dataDiv" id="dataDiv"></div>
+      </div>
+    </section>
+    <section class="signUp" id="signUp">
+      <h2 class="heading">Join Us</h2>
+      <form class="signUp-form">
+        <div class="input-box">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-input"
+            name="email"
+            id="email1"
+            placeholder="Email@example.com"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            class="form-input"
+            name="password"
+            id="password"
+            placeholder="********"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="confirmPassword">Confirm Password</label>
+          <input
+            type="password"
+            class="form-input"
+            name="confirmPassword"
+            id="confirmPassword"
+            placeholder="********"
+            required
+          />
+        </div>
+        <button type="button" class="btnB signupBtn" id="register">
+          Sign Up
+        </button>
+      </form>
+    </section>
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact Us</h2>
+      <form
+        action="https://formspree.io/f/xoqgdopq"
+        method="POST"
+        class="contact-form"
+      >
+        <div class="input-box">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-input"
+            name="name"
+            id="name"
+            placeholder="Full Name"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-input"
+            name="email"
+            id="email2"
+            placeholder="Email@example.com"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="message">Message</label>
+          <textarea
+            class="form-input"
+            name="message"
+            id="message"
+            placeholder="Message"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btnB">Submit</button>
+      </form>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

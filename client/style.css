@@ -1,0 +1,533 @@
+/* General CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(235, 255, 248);
+  gap: 3rem;
+}
+
+p,
+a,
+input {
+  font-size: 16px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+  margin: 4rem;
+  min-height: 100vh;
+}
+
+button {
+  padding: 8.5px;
+  height: 3rem;
+  min-width: 9rem;
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease-in;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.btnA {
+  background-color: rgb(235, 255, 248);
+  color: black;
+}
+
+.btnB {
+  background-color: black;
+  color: white;
+}
+
+/* .signupBtn {
+  margin-bottom: 8rem;
+} */
+
+.heading {
+  font-weight: bold;
+  color: black;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: #c4c4c4 0px 10px 10px -10px;
+}
+
+/* Navbar CSS */
+nav {
+  background-color: rgb(235, 255, 248);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 3.2rem;
+}
+
+nav .left-section,
+nav .right-section {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+nav .left-section {
+  width: 70%;
+}
+
+nav .left-section .links-list {
+  display: flex;
+  list-style-type: none;
+  gap: 1.5rem;
+}
+
+nav .left-section .logo .logo-content {
+  font-size: 40px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+nav .left-section .links-list .nav-link {
+  text-decoration: none;
+  width: fit-content;
+  text-wrap: none;
+  color: black;
+  font-size: 16px;
+  white-space: nowrap;
+  transition: all 0.2s ease-in;
+}
+
+nav .left-section .links-list .nav-link:hover {
+  opacity: 0.6;
+}
+nav .right-section {
+  width: 30%;
+  justify-content: flex-end;
+}
+
+nav .right-section .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+nav .right-section .buttons button a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.show-menu {
+  display: flex !important;
+  flex-direction: column;
+}
+
+/* Hero CSS */
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+  height: 100%;
+}
+
+.hero .container .right-section {
+  width: 35%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .container .right-section .img-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.hero .container .right-section .img-container img {
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 150px;
+}
+
+.hero .container .left-section {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.hero .container .left-section p {
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-start;
+  text-align: justify;
+  max-width: 35rem;
+}
+
+.hero .container .left-section button a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+/* Service CSS */
+.service {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2.5rem;
+}
+
+.service .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+#uploadForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+#uploadedImage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  align-items: center;
+  gap: 2.5rem;
+  min-height: 80%;
+  width: 80vw;
+}
+
+#uploadedImage img {
+  max-width: 100%;
+  max-height: 100%;
+  /* height: 250px; */
+  border-radius: 50px;
+}
+
+#drop_zone {
+  width: 100%;
+  min-height: 200px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 50px;
+}
+
+#drop_zone #fileInput {
+  text-align: center;
+}
+
+/* About CSS */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+  background-color: white;
+  margin: 0%;
+}
+.about p {
+  font-size: 16px;
+  width: 60%;
+  text-align: center;
+}
+
+.about .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .container .dataDiv {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.about .container .dataDiv .dataBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  padding: 2rem;
+  width: 10rem;
+  height: 10rem;
+  /* border: 1px solid black; */
+  background-color: rgb(235, 255, 248);
+  transition: all 0.2s ease-in;
+}
+
+.about .container .dataDiv .dataBox h3,
+.about .container .dataDiv .dataBox p {
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+}
+
+.about .container .dataDiv .dataBox h3 {
+  font-weight: bold;
+}
+
+/* SignUp CSS */
+.signUp {
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.signUp form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: 50%;
+}
+
+.signUp form .input-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.signUp form .input-box label {
+  font-size: 16px;
+}
+.signUp form .input-box .form-input {
+  background-color: rgb(235, 255, 248);
+  font-size: 16px;
+  padding: 1rem;
+  background-color: none;
+  border: 1px solid black;
+  border-radius: 50px;
+  width: 100%;
+  outline: none;
+}
+
+.signUp form button {
+  width: fit-content;
+}
+
+/* Contact CSS */
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin: 0%;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: 50%;
+}
+
+.contact form .input-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.contact form .input-box label {
+  font-size: 16px;
+}
+.contact form .input-box .form-input {
+  font-size: 16px;
+  padding: 1rem;
+  /* background-color: rgb(235, 255, 248); */
+  border: 1px solid black;
+  border-radius: 50px;
+  width: 100%;
+  outline: none;
+}
+
+.contact form .input-box textarea {
+  min-height: 30vh;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  outline: none;
+  resize: none;
+}
+
+.contact form button {
+  width: fit-content;
+}
+
+.contact {
+  padding-bottom: 6rem;
+}
+
+/* Responsive CSS */
+@media (max-width: 950px) {
+  section {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  nav .left-section .links-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgb(235, 255, 248);
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero .container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+    height: 100%;
+  }
+
+  .hero .container .right-section {
+    width: 100%;
+  }
+
+  #drop_zone {
+    display: none;
+  }
+  p,
+  a {
+    font-size: 14px;
+  }
+
+  .signUp form {
+    width: 70%;
+  }
+
+  .signUp form .input-box {
+    font-size: 14px;
+  }
+
+  .contact form {
+    width: 70%;
+  }
+  .contact form .input-box textarea {
+    width: 100%;
+    height: 15rem;
+  }
+
+  .contact form .input-box {
+    font-size: 14px;
+  }
+
+  section {
+    min-height: 100vh;
+    /* padding: 0rem; */
+    margin: 4rem;
+  }
+}
+
+@media (max-width: 580px) {
+  #signUpBtn {
+    display: none;
+  }
+
+  nav .right-section .buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 18vh;
+  }
+}
+
+.show-menu {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
